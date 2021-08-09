@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Calculadora simples</title>
+    <meta charset="UTF-8"> 
+</head>
+<body> 
+<script type="text/javascript">
+
+function CalculaR()
+{
+if (somar.checked=== true) 
+ res.value= parseFloat(v1.value) + parseFloat(v2.value);
+ else if (subtrair.checked ===true)
+      res.value= parseFloat(v1.value) - parseFloat(v2.value);
+ else if (multiplicar.checked ===true)
+    res.value= parseFloat(v1.value) * parseFloat(v2.value);
+
+ else {
+    if (parseFloat(v2.value) === 0)
+        res.value= 'Erro!';
+    else
+     res.value = parseFloat(v1.value) / parseFloat(v2.value);
+    }
+}
+ 
+</script> 
+<h1>Calculadora simples</h1>
+valor 1:<input type="text" id="v1" value="0"><br>
+valor 2:<input type="text" id="v2" value="0"><br>
+Operação:
+
+<select id="op">
+<option value="">(Escolha uma opção)</option> <option value="+">
+    Somar</option> 
+    <option value="-">Subtrair</option> 
+    <option value="*">Multiplicar</option> 
+    <option value="/">Dividir</option> </select><br>
+<input type="button" value="executar" onclick="calcular()"><br>  
+resultado:<input type="text" id="res" value="0" readonly>
+</body>
+</html>
